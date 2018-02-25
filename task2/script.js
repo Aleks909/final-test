@@ -6,11 +6,20 @@ var arr = [2, 5, 8, 4, 1, 12];
 
 //...
 
+arr.sort(function(a, b) {
+  return a - b;
+});
+
 // задача 2 (4т.)
 // Напишете функция, която да изважда всички думи, с дължина над 4 символа от следния текст:
 var text = "The quick brown fox jumps over the lazy dog";
 
 // ...
+
+var array_1 = ["the","quick","brown","fox","jumped","over","the","lazy","dog"];
+var array_cleaned = array_1.filter( function( element ) {
+  return element.length > 4;
+});
 
 // задача 3 (5т.)
 // Напишете код, който на всяка секунда закача към `#container` елемента следния html елемент: `<p>repetition is fun</p>`
@@ -48,3 +57,7 @@ var items = [
 ];
 
 // ...
+
+items.sort(function(a, b) {
+    return parseFloat(a.price) - parseFloat(b.price);
+});
